@@ -1,3 +1,5 @@
+"use strict";
+
 module.exports = {
     MODE_DATE: "date",
     MODE_DATETIME: "datetime",

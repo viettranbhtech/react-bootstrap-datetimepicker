@@ -1,94 +1,228 @@
-import React, { Component, PropTypes } from "react";
-import Constants from "./Constants.js";
+"use strict";
+var PropTypes = require("prop-types")
 
-export default class DateTimePickerHours extends Component {
-  static propTypes = {
-    setSelectedHour: PropTypes.func.isRequired,
-    onSwitch: PropTypes.func.isRequired,
-    mode: PropTypes.string.isRequired
+var _get = require("babel-runtime/helpers/get")["default"];
+
+var _inherits = require("babel-runtime/helpers/inherits")["default"];
+
+var _createClass = require("babel-runtime/helpers/create-class")["default"];
+
+var _classCallCheck = require("babel-runtime/helpers/class-call-check")["default"];
+
+var _interopRequireDefault = require("babel-runtime/helpers/interop-require-default")["default"];
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _ConstantsJs = require("./Constants.js");
+
+var _ConstantsJs2 = _interopRequireDefault(_ConstantsJs);
+
+var DateTimePickerHours = (function (_Component) {
+  _inherits(DateTimePickerHours, _Component);
+
+  function DateTimePickerHours() {
+    var _this = this;
+
+    _classCallCheck(this, DateTimePickerHours);
+
+    _get(Object.getPrototypeOf(DateTimePickerHours.prototype), "constructor", this).apply(this, arguments);
+
+    this.renderSwitchButton = function () {
+      return _this.props.mode === _ConstantsJs2["default"].MODE_TIME ? _react2["default"].createElement(
+        "ul",
+        { className: "list-unstyled" },
+        _react2["default"].createElement(
+          "li",
+          null,
+          _react2["default"].createElement(
+            "span",
+            { className: "btn picker-switch", onClick: _this.props.onSwitch, style: { width: "100%" } },
+            _react2["default"].createElement("span", { className: "glyphicon glyphicon-time" })
+          )
+        )
+      ) : null;
+    };
   }
 
-  renderSwitchButton = () => {
-    return this.props.mode === Constants.MODE_TIME ?
-        (
-            <ul className="list-unstyled">
-              <li>
-                <span className="btn picker-switch" onClick={this.props.onSwitch} style={{width: "100%"}} ><span className="glyphicon glyphicon-time" /></span>
-              </li>
-            </ul>
-        ) :
-        null;
-  }
+  _createClass(DateTimePickerHours, [{
+    key: "render",
+    value: function render() {
+      return _react2["default"].createElement(
+        "div",
+        { className: "timepicker-hours", "data-action": "selectHour", style: { display: "block" } },
+        this.renderSwitchButton(),
+        _react2["default"].createElement(
+          "table",
+          { className: "table-condensed" },
+          _react2["default"].createElement(
+            "tbody",
+            null,
+            _react2["default"].createElement(
+              "tr",
+              null,
+              _react2["default"].createElement(
+                "td",
+                { className: "hour", onClick: this.props.setSelectedHour },
+                "01"
+              ),
+              _react2["default"].createElement(
+                "td",
+                { className: "hour", onClick: this.props.setSelectedHour },
+                "02"
+              ),
+              _react2["default"].createElement(
+                "td",
+                { className: "hour", onClick: this.props.setSelectedHour },
+                "03"
+              ),
+              _react2["default"].createElement(
+                "td",
+                { className: "hour", onClick: this.props.setSelectedHour },
+                "04"
+              )
+            ),
+            _react2["default"].createElement(
+              "tr",
+              null,
+              _react2["default"].createElement(
+                "td",
+                { className: "hour", onClick: this.props.setSelectedHour },
+                "05"
+              ),
+              _react2["default"].createElement(
+                "td",
+                { className: "hour", onClick: this.props.setSelectedHour },
+                "06"
+              ),
+              _react2["default"].createElement(
+                "td",
+                { className: "hour", onClick: this.props.setSelectedHour },
+                "07"
+              ),
+              _react2["default"].createElement(
+                "td",
+                { className: "hour", onClick: this.props.setSelectedHour },
+                "08"
+              )
+            ),
+            _react2["default"].createElement(
+              "tr",
+              null,
+              _react2["default"].createElement(
+                "td",
+                { className: "hour", onClick: this.props.setSelectedHour },
+                "09"
+              ),
+              _react2["default"].createElement(
+                "td",
+                { className: "hour", onClick: this.props.setSelectedHour },
+                "10"
+              ),
+              _react2["default"].createElement(
+                "td",
+                { className: "hour", onClick: this.props.setSelectedHour },
+                "11"
+              ),
+              _react2["default"].createElement(
+                "td",
+                { className: "hour", onClick: this.props.setSelectedHour },
+                "12"
+              )
+            ),
+            _react2["default"].createElement(
+              "tr",
+              null,
+              _react2["default"].createElement(
+                "td",
+                { className: "hour", onClick: this.props.setSelectedHour },
+                "13"
+              ),
+              _react2["default"].createElement(
+                "td",
+                { className: "hour", onClick: this.props.setSelectedHour },
+                "14"
+              ),
+              _react2["default"].createElement(
+                "td",
+                { className: "hour", onClick: this.props.setSelectedHour },
+                "15"
+              ),
+              _react2["default"].createElement(
+                "td",
+                { className: "hour", onClick: this.props.setSelectedHour },
+                "16"
+              )
+            ),
+            _react2["default"].createElement(
+              "tr",
+              null,
+              _react2["default"].createElement(
+                "td",
+                { className: "hour", onClick: this.props.setSelectedHour },
+                "17"
+              ),
+              _react2["default"].createElement(
+                "td",
+                { className: "hour", onClick: this.props.setSelectedHour },
+                "18"
+              ),
+              _react2["default"].createElement(
+                "td",
+                { className: "hour", onClick: this.props.setSelectedHour },
+                "19"
+              ),
+              _react2["default"].createElement(
+                "td",
+                { className: "hour", onClick: this.props.setSelectedHour },
+                "20"
+              )
+            ),
+            _react2["default"].createElement(
+              "tr",
+              null,
+              _react2["default"].createElement(
+                "td",
+                { className: "hour", onClick: this.props.setSelectedHour },
+                "21"
+              ),
+              _react2["default"].createElement(
+                "td",
+                { className: "hour", onClick: this.props.setSelectedHour },
+                "22"
+              ),
+              _react2["default"].createElement(
+                "td",
+                { className: "hour", onClick: this.props.setSelectedHour },
+                "23"
+              ),
+              _react2["default"].createElement(
+                "td",
+                { className: "hour", onClick: this.props.setSelectedHour },
+                "24"
+              )
+            )
+          )
+        )
+      );
+    }
+  }], [{
+    key: "propTypes",
+    value: {
+      setSelectedHour: PropTypes.func.isRequired,
+      onSwitch: PropTypes.func.isRequired,
+      mode: PropTypes.string.isRequired
+    },
+    enumerable: true
+  }]);
 
-  render() {
-    return (
-      <div className="timepicker-hours" data-action="selectHour" style={{display: "block"}}>
-        {this.renderSwitchButton()}
-        <table className="table-condensed">
-          <tbody>
-            <tr>
-              <td className="hour" onClick={this.props.setSelectedHour}>01</td>
+  return DateTimePickerHours;
+})(_react.Component);
 
-              <td className="hour" onClick={this.props.setSelectedHour}>02</td>
-
-              <td className="hour" onClick={this.props.setSelectedHour}>03</td>
-
-              <td className="hour" onClick={this.props.setSelectedHour}>04</td>
-            </tr>
-
-            <tr>
-              <td className="hour" onClick={this.props.setSelectedHour}>05</td>
-
-              <td className="hour" onClick={this.props.setSelectedHour}>06</td>
-
-              <td className="hour" onClick={this.props.setSelectedHour}>07</td>
-
-              <td className="hour" onClick={this.props.setSelectedHour}>08</td>
-            </tr>
-
-            <tr>
-              <td className="hour" onClick={this.props.setSelectedHour}>09</td>
-
-              <td className="hour" onClick={this.props.setSelectedHour}>10</td>
-
-              <td className="hour" onClick={this.props.setSelectedHour}>11</td>
-
-              <td className="hour" onClick={this.props.setSelectedHour}>12</td>
-            </tr>
-
-            <tr>
-              <td className="hour" onClick={this.props.setSelectedHour}>13</td>
-
-              <td className="hour" onClick={this.props.setSelectedHour}>14</td>
-
-              <td className="hour" onClick={this.props.setSelectedHour}>15</td>
-
-              <td className="hour" onClick={this.props.setSelectedHour}>16</td>
-            </tr>
-
-            <tr>
-              <td className="hour" onClick={this.props.setSelectedHour}>17</td>
-
-              <td className="hour" onClick={this.props.setSelectedHour}>18</td>
-
-              <td className="hour" onClick={this.props.setSelectedHour}>19</td>
-
-              <td className="hour" onClick={this.props.setSelectedHour}>20</td>
-            </tr>
-
-            <tr>
-              <td className="hour" onClick={this.props.setSelectedHour}>21</td>
-
-              <td className="hour" onClick={this.props.setSelectedHour}>22</td>
-
-              <td className="hour" onClick={this.props.setSelectedHour}>23</td>
-
-              <td className="hour" onClick={this.props.setSelectedHour}>24</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    );
-  }
-}
-
+exports["default"] = DateTimePickerHours;
+module.exports = exports["default"];
